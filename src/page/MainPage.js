@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../component/NavBar";
 
-function Main() {
+function MainPage() {
     return (
         <div>
             <NavBar />
@@ -9,4 +9,4 @@ function Main() {
     )
 }
 
-export default Main;
+export default MainPage;
