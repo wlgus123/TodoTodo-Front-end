@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { GlobalStyle } from "../Style/styles";
 import { ReactComponent as Menu } from "../img/Menu.svg";
 import { ReactComponent as Logo } from "../img/Logo.svg";
 import { ReactComponent as User } from "../img/User.svg";
+
+const handleMenu = () => {
+}
 
 function Navbar() {
   return (
@@ -16,7 +19,7 @@ function Navbar() {
       </NavbarLogo>
       <NavbarRightContainer>
         <NavbarRight> {/* navbar right */}
-          <Menu />
+          <Menu onClick={handleMenu()} />
         </NavbarRight>
         <NavbarRight>
           <User />
