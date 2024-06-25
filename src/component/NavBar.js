@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { GlobalStyle } from "../Style/styles";
-import { ReactComponent as Menu } from "../img/Menu.svg";
-import { ReactComponent as Logo } from "../img/Logo.svg";
-import { ReactComponent as User } from "../img/User.svg";
+import { ReactComponent as Menu } from "../assets/main/Menu.svg";
+import { ReactComponent as Logo } from "../assets/main/Logo.svg";
+import { ReactComponent as User } from "../assets/main/User.svg";
 
 const handleMenu = () => {
 }

@@ -25,14 +25,14 @@ const Input = styled.input`
 `;
 
 const Todo = ({ text }) => {
-    const [isChecked, setIsChecked] = useState(0);
+    const [isChecked, setIsChecked] = useState(false);
     const HandleTodoCheck = () => {
         setIsChecked(isChecked => !isChecked);
     }
     return (
         <TodoContainer>
-            <Label htmlFor="todo" className={isChecked ? "checked" : ''} onClick={HandleTodoCheck}>
-                <Input type="checkbox" id="todo" className={isChecked ? "checked" : ''} onClick={HandleTodoCheck} /> {text ? text : "할 일을 입력하세요"}
+            <Label htmlFor="todo" className={isChecked ? "checked" : ''}>
+                <Input type="checkbox" id="todo" onClick={HandleTodoCheck} /> {text ? text : "할 일을 입력하세요"}
             </Label>
         </TodoContainer>
     )
