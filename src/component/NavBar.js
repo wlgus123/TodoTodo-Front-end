@@ -36,6 +36,7 @@ const NavbarContainer = styled.div`
   position: fixed;
   left: 0;
   right: 0;
+  top: 0;
 
   background-color: white;
   box-shadow: 0px 1px 10px 0px #cccccc;

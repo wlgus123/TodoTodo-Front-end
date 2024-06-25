@@ -6,4 +6,14 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         box-sizing: border-box;
     }
+
+    input {
+        text-decoration: none;
+        outline: none;
+    }
+
+    body {
+        margin-top: 65px;
+        background: #EFEFEF;
+    }
 `
