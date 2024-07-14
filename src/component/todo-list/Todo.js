@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { styled } from "styled-components";
 
 const TodoContainer = styled.div`
@@ -24,17 +24,27 @@ const Input = styled.input`
     cursor: pointer;
 `;
 
-const Todo = ({ text }) => {
-    const [isChecked, setIsChecked] = useState(false);
-    const HandleTodoCheck = () => {
-        setIsChecked(isChecked => !isChecked);
+const Todo = ({ todo }) => {
+    const HandleTodoCheck = ({ id }) => {
+        
     }
     return (
-        <TodoContainer>
-            <Label htmlFor="todo" className={isChecked ? "checked" : ''}>
-                <Input type="checkbox" id="todo" onClick={HandleTodoCheck} /> {text ? text : "할 일을 입력하세요"}
-            </Label>
-        </TodoContainer>
+        <div>
+        {todo ? (
+            todo.map((t)=>(
+            <TodoContainer key={t.id}>
+                <div>
+                <Label htmlFor="todo" className={t.isChecked ? "checked" : ''}>
+                    <Input type="checkbox" id={t.id} checked={t.isChecked} onClick={HandleTodoCheck} /> {t.text ? t.text : "할 일을 입력하세요"}
+                </Label>
+                </div>
+            </TodoContainer>
+        ))) : (
+            <div>
+                할 일이 없습니다.
+            </div>
+        )}
+        </div>
     )
 }
 
